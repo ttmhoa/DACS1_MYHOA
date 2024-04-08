@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import java.lang.String?>
+<?import javafx.scene.chart.AreaChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.dacs_myhoa.dashbroadController">
+   <children>
+      <AnchorPane fx:id="main_form" prefHeight="650.0" prefWidth="1200.0">
+         <children>
+            <BorderPane prefHeight="650.0" prefWidth="1200.0" styleClass="border-pane" stylesheets="@DashBoard.Css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <top>
+                  <AnchorPane prefHeight="44.0" prefWidth="1199.0" styleClass="semi-top" stylesheets="@DashBoard.Css" BorderPane.alignment="CENTER">
+                     <children>
+                        <AnchorPane layoutX="1.6" layoutY="1.6" prefHeight="41.0" prefWidth="1198.0" styleClass="top-form" stylesheets="@DashBoard.Css" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="1.0">
+                           <children>
+                              <Button fx:id="close_dash" layoutX="1134.0" layoutY="15.0" mnemonicParsing="false" onAction="#closedashbroad" prefHeight="25.0" prefWidth="64.0" styleClass="close-btn" stylesheets="@DashBoard.Css" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="3.0">
+                                 <graphic>
+                                    <FontAwesomeIcon glyphName="CLOSE" size="1.4em" />
+                                 </graphic>
+                              </Button>
+                              <Button fx:id="minize_dash" layoutX="1074.0" layoutY="3.0" mnemonicParsing="false" onAction="#minimize" prefHeight="22.0" prefWidth="59.0" styleClass="minimize-btn" stylesheets="@DashBoard.Css" AnchorPane.rightAnchor="70.0" AnchorPane.topAnchor="3.0">
+                                 <graphic>
+                                    <FontAwesomeIcon glyphName="MINUS" size="1.4em" />
+                                 </graphic>
+                              </Button>
+                              <FontAwesomeIcon glyphName="USERS" layoutX="20.0" layoutY="27.0" size="2em" />
+                              <Label layoutX="57.0" layoutY="10.0" prefHeight="18.0" prefWidth="182.0" text="Gym Management System" />
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </top>
+               <left>
+                  <AnchorPane prefHeight="612.0" prefWidth="236.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <AnchorPane layoutY="-1.6" prefHeight="595.2" prefWidth="236.0" stylesheets="@DashBoard.Css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <FontAwesomeIcon fill="#fafbff" glyphName="USER" layoutX="85.0" layoutY="112.0" selectionFill="#f7f2f2" size="7em" />
+                              <Label layoutX="59.0" layoutY="135.0" prefHeight="43.0" prefWidth="144.0" text="Welcome " textFill="#f2f2f2">
+                                 <font>
+                                    <Font name="System Bold" size="29.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="username" alignment="CENTER" contentDisplay="TEXT_ONLY" layoutX="8.0" layoutY="178.0" prefHeight="31.0" prefWidth="207.0" text="USER" textFill="#fffdfd">
+                                 <font>
+                                    <Font name="System Bold" size="21.0" />
+                                 </font>
+                              </Label>
+                              <Line endX="111.40000915527344" layoutX="115.0" layoutY="228.0" startX="-106.19999694824219" stroke="#fff0f0" />
+                              <Button fx:id="dashboard_btn" layoutX="29.0" layoutY="257.0" mnemonicParsing="false" onAction="#switchform" prefHeight="35.0" prefWidth="162.0" styleClass="nav-btn" stylesheets="@DashBoard.Css" text="Dashboard" />
+                              <Button fx:id="coaches" layoutX="29.0" layoutY="307.0" mnemonicParsing="false" onAction="#switchform" prefHeight="35.0" prefWidth="162.0" styleClass="nav-btn" stylesheets="@DashBoard.Css" text="Coaches" />
+                              <Button fx:id="members" layoutX="29.0" layoutY="358.0" mnemonicParsing="false" onAction="#switchform" prefHeight="35.0" prefWidth="162.0" styleClass="nav-btn" stylesheets="@DashBoard.Css" text="Members" />
+                              <Button fx:id="logout_btn" layoutX="14.0" layoutY="556.0" mnemonicParsing="false" onAction="#logout" prefHeight="28.0" prefWidth="48.0" stylesheets="@DashBoard.Css" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="3.0">
+                                 <graphic>
+                                    <FontAwesomeIcon fill="#fffafa" glyphName="SIGN_OUT" size="1.6em" />
+                                 </graphic>
+                                 <styleClass>
+                                    <String fx:value="logout" />
+                                    <String fx:value="shadow" />
+                                 </styleClass>
+                              </Button>
+                              <Label layoutX="59.0" layoutY="565.0" prefHeight="28.0" prefWidth="82.0" text="Logn out" textFill="#f4f4f4" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="58.0">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Button fx:id="payment" layoutX="29.0" layoutY="410.0" mnemonicParsing="false" onAction="#switchform" prefHeight="35.0" prefWidth="162.0" styleClass="nav-btn" stylesheets="@DashBoard.Css" text="Payment" />
+                           </children>
+                           <styleClass>
+                              <String fx:value="nav" />
+                              <String fx:value="shadow" />
+                              <String fx:value="nav-boder" />
+                           </styleClass>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </left>
+               <center>
+                  <AnchorPane prefHeight="200.0" prefWidth="630.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <AnchorPane fx:id="dashbroad_form" layoutX="6.0" prefHeight="595.2" prefWidth="963.2" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <AnchorPane layoutX="12.0" layoutY="3.0" prefHeight="175.0" prefWidth="938.0" stylesheets="@DashBoard.Css">
+                                 <styleClass>
+                                    <String fx:value="whileback" />
+                                    <String fx:value="shadow" />
+                                 </styleClass>
+                                 <children>
+                                    <AnchorPane layoutX="22.0" layoutY="11.0" prefHeight="147.0" prefWidth="271.0" styleClass="nav" stylesheets="@DashBoard.Css">
+                                       <children>
+                                          <FontAwesomeIcon fill="#f7f7f7" glyphName="USERS" layoutX="14.0" layoutY="104.0" size="7em" text="" />
+                                          <Label fx:id="dashbroad_NM" alignment="CENTER_RIGHT" layoutX="131.0" layoutY="27.0" prefHeight="27.0" prefWidth="109.0" text="0" textFill="#fff9f9">
+                                             <font>
+                                                <Font name="Arial" size="24.0" />
+                                             </font>
+                                          </Label>
+                                          <Label alignment="CENTER" layoutX="91.0" layoutY="105.0" prefHeight="34.0" prefWidth="158.0" text="Number of Members" textFill="#fff9f9">
+                                             <font>
+                                                <Font name="Arial Narrow" size="17.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane layoutX="338.0" layoutY="12.0" prefHeight="147.0" prefWidth="274.0" styleClass="nav" stylesheets="@DashBoard.Css">
+                                       <children>
+                                          <Label fx:id="dashbroad_NC" alignment="CENTER_RIGHT" layoutX="120.0" layoutY="28.0" prefHeight="27.0" prefWidth="115.0" text="0" textFill="#fff9f9">
+                                             <font>
+                                                <Font name="Arial" size="24.0" />
+                                             </font>
+                                          </Label>
+                                          <Label alignment="CENTER" layoutX="107.0" layoutY="105.0" prefHeight="34.0" prefWidth="158.0" text="Number of Cauches" textFill="#fff9f9">
+                                             <font>
+                                                <Font name="Arial Narrow" size="17.0" />
+                                             </font>
+                                          </Label>
+                                          <FontAwesomeIcon fill="WHITE" glyphName="USER" layoutX="20.0" layoutY="100.0" size="7em" />
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane layoutX="655.0" layoutY="12.0" prefHeight="146.0" prefWidth="262.0" styleClass="nav" stylesheets="@DashBoard.Css">
+                                       <children>
+                                          <FontAwesomeIcon fill="WHITE" glyphName="MONEY" layoutX="14.0" layoutY="107.0" size="7em" />
+                                          <Label alignment="CENTER" layoutX="93.0" layoutY="102.0" prefHeight="34.0" prefWidth="146.0" text="Total Income" textFill="#fff9f9">
+                                             <font>
+                                                <Font name="Arial Narrow" size="17.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="dashbroad_TI" alignment="TOP_RIGHT" layoutX="109.0" layoutY="29.0" prefHeight="27.0" prefWidth="122.0" text="\$0.0" textFill="#fff9f9">
+                                             <font>
+                                                <Font name="Arial" size="24.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane layoutX="12.0" layoutY="200.0" prefHeight="385.0" prefWidth="938.0" stylesheets="@DashBoard.Css">
+                                 <styleClass>
+                                    <String fx:value="whileback" />
+                                    <String fx:value="shadow" />
+                                 </styleClass>
+                                 <children>
+                                    <AnchorPane layoutX="7.0" layoutY="7.0" prefHeight="370.0" prefWidth="925.0">
+                                       <children>
+                                          <AreaChart fx:id="dashbroad_datachar" layoutX="9.0" layoutY="10.0" prefHeight="370.4" prefWidth="925.6" stylesheets="@DashBoard.Css" title="Data Chart" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                            <xAxis>
+                                              <CategoryAxis side="BOTTOM" />
+                                            </xAxis>
+                                            <yAxis>
+                                              <NumberAxis side="LEFT" />
+                                            </yAxis>
+                                          </AreaChart>
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                              </AnchorPane>
+                              <Separator layoutX="11.0" layoutY="187.0" prefHeight="0.0" prefWidth="942.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="coaches_form" prefHeight="595.2" prefWidth="963.2" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <AnchorPane layoutX="14.0" layoutY="9.0" prefHeight="574.0" prefWidth="309.0" stylesheets="@DashBoard.Css">
+                                 <styleClass>
+                                    <String fx:value="whileback" />
+                                    <String fx:value="shadow" />
+                                 </styleClass>
+                                 <children>
+                                    <Label layoutX="42.0" layoutY="61.0" text="Coach ID :">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="coaches_id" layoutX="109.0" layoutY="57.0" prefHeight="28.0" prefWidth="183.0" styleClass="textfield" stylesheets="@DashBoard.Css" />
+                                    <Label layoutX="55.0" layoutY="106.0" text="Name :">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="coaches_name" layoutX="109.0" layoutY="102.0" prefHeight="28.0" prefWidth="183.0" styleClass="textfield" stylesheets="@DashBoard.Css" />
+                                    <Label layoutX="44.0" layoutY="158.0" prefHeight="20.0" prefWidth="61.0" text="Address :">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <TextArea fx:id="coaches_address" layoutX="108.0" layoutY="152.0" prefHeight="104.0" prefWidth="186.0" styleClass="textfield" stylesheets="@DashBoard.Css" />
+                                    <Label layoutX="43.0" layoutY="280.0" prefHeight="20.0" prefWidth="61.0" text="Gender :">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <ComboBox fx:id="coaches_gender" layoutX="107.0" layoutY="277.0" prefHeight="26.0" prefWidth="187.0" promptText="Choose.." styleClass="textfield" stylesheets="@DashBoard.Css" />
+                                    <Label layoutX="48.0" layoutY="332.0" text="Phone :" AnchorPane.leftAnchor="48.0">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="coaches_phone" layoutX="107.0" layoutY="327.0" prefHeight="30.0" prefWidth="186.0" styleClass="textfield" stylesheets="@DashBoard.Css" />
+                                    <Button fx:id="coaches_btn_add" layoutX="42.0" layoutY="435.0" mnemonicParsing="false" onAction="#coachesAddbtn" prefHeight="32.0" prefWidth="101.0" styleClass="btn" stylesheets="@DashBoard.Css" text="Add" />
+                                    <Button fx:id="coaches_btn_update" layoutX="190.0" layoutY="435.0" mnemonicParsing="false" onAction="#coachesUpdatebtn" prefHeight="32.0" prefWidth="101.0" styleClass="btn" stylesheets="@DashBoard.Css" text="Update" />
+                                    <Button fx:id="coaches_btn_delete" layoutX="42.0" layoutY="491.0" mnemonicParsing="false" onAction="#coachesDeletebtn" prefHeight="32.0" prefWidth="101.0" styleClass="btn" stylesheets="@DashBoard.Css" text="Delete" />
+                                    <Button fx:id="coaches_btn_reset" layoutX="190.0" layoutY="491.0" mnemonicParsing="false" onAction="#coachesClearbtn" prefHeight="32.0" prefWidth="101.0" styleClass="btn" stylesheets="@DashBoard.Css" text="Reset" />
+                                    <Label layoutX="49.0" layoutY="382.0" text="Status :">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <ComboBox fx:id="coaches_status" layoutX="107.0" layoutY="379.0" prefHeight="26.0" prefWidth="187.0" promptText="Choose.." styleClass="textfield" stylesheets="@DashBoard.Css" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane layoutX="348.0" layoutY="10.0" prefHeight="574.0" prefWidth="605.0" stylesheets="@DashBoard.Css">
+                                 <styleClass>
+                                    <String fx:value="whileback" />
+                                    <String fx:value="shadow" />
+                                 </styleClass>
+                                 <children>
+                                    <TableView fx:id="coaches_tableview" layoutX="7.0" layoutY="8.0" onMouseClicked="#coachesSelect" prefHeight="562.0" prefWidth="592.0" AnchorPane.bottomAnchor="7.0" AnchorPane.leftAnchor="7.0" AnchorPane.rightAnchor="7.0" AnchorPane.topAnchor="7.0">
+                                      <columns>
+                                        <TableColumn fx:id="coaches_col_id" prefWidth="65.60003966093063" text="Coach ID" />
+                                        <TableColumn fx:id="coaches_col_name" prefWidth="110.39996337890625" text="Name" />
+                                          <TableColumn fx:id="coaches_col_address" prefWidth="144.80003356933594" text="Address" />
+                                          <TableColumn fx:id="coaches_col_gender" prefWidth="66.39996337890625" text="Gender" />
+                                          <TableColumn fx:id="coaches_col_phone" prefWidth="98.40008544921875" text="Phone" />
+                                          <TableColumn fx:id="coaches_col_status" prefWidth="102.40001220703118" text="Status" />
+                                      </columns>
+                                    </TableView>
+                                 </children>
+                              </AnchorPane>
+                              <Separator layoutX="334.0" layoutY="12.0" orientation="VERTICAL" prefHeight="571.0" prefWidth="8.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="member_form" layoutX="20.0" layoutY="34.0" prefHeight="595.2" prefWidth="963.2" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <AnchorPane layoutX="12.0" layoutY="14.0" prefHeight="198.0" prefWidth="938.0" stylesheets="@DashBoard.Css">
+                                 <styleClass>
+                                    <String fx:value="shadow" />
+                                    <String fx:value="whileback" />
+                                 </styleClass>
+                                 <children>
+                                    <Label layoutY="26.0" prefHeight="30.0" prefWidth="86.0" text="Member ID :" />
+                                    <TextField fx:id="member_ID" layoutX="86.0" layoutY="26.0" prefHeight="30.0" prefWidth="218.0" promptText="Coach  ID..." styleClass="textfield" stylesheets="@DashBoard.Css" />
+                                    <Label layoutX="28.0" layoutY="67.0" prefHeight="30.0" prefWidth="72.0" text="Name :" />
+                                    <TextField fx:id="member_name" layoutX="86.0" layoutY="68.0" prefHeight="30.0" prefWidth="218.0" promptText="Name ..." styleClass="textfield" stylesheets="@DashBoard.Css" />
+                                    <Label layoutX="14.0" layoutY="113.0" prefHeight="30.0" prefWidth="72.0" text="Address :" />
+                                    <TextArea fx:id="member_address" layoutX="87.0" layoutY="114.0" prefHeight="67.0" prefWidth="216.0" promptText="Address..." styleClass="textfield" stylesheets="@DashBoard.Css" />
+                                    <Label layoutX="332.0" layoutY="26.0" prefHeight="30.0" prefWidth="62.0" text="Phone  :" />
+                                    <TextField fx:id="member_phone" layoutX="394.0" layoutY="26.0" prefHeight="30.0" prefWidth="218.0" promptText="0*********" styleClass="textfield" stylesheets="@DashBoard.Css" />
+                                    <Label layoutX="332.0" layoutY="68.0" prefHeight="30.0" prefWidth="52.0" text="Gender :" />
+                                    <ComboBox fx:id="member_gender" layoutX="394.0" layoutY="68.0" prefHeight="29.0" prefWidth="218.0" promptText="Choose.." styleClass="textfield" stylesheets="@DashBoard.Css" />
+                                    <Label layoutX="316.0" layoutY="113.0" prefHeight="30.0" prefWidth="67.0" text="Schedule  :" />
+                                    <ComboBox fx:id="member_schedule" layoutX="394.0" layoutY="113.0" prefHeight="29.0" prefWidth="218.0" promptText="Choose.." styleClass="textfield" stylesheets="@DashBoard.Css" />
+                                    <Label layoutX="640.0" layoutY="26.0" prefHeight="30.0" prefWidth="64.0" text="Start Date :" />
+                                    <DatePicker fx:id="member_startdate" layoutX="712.0" layoutY="26.0" prefHeight="30.0" prefWidth="211.0" styleClass="textfield" stylesheets="@DashBoard.Css" />
+                                    <Label layoutX="646.0" layoutY="68.0" prefHeight="30.0" prefWidth="64.0" text="End Date :" />
+                                    <DatePicker fx:id="member_enddate" layoutX="714.0" layoutY="68.0" prefHeight="30.0" prefWidth="209.0" styleClass="textfield" stylesheets="@DashBoard.Css" />
+                                    <Label layoutX="659.0" layoutY="112.0" prefHeight="30.0" prefWidth="50.0" text="Status :" />
+                                    <ComboBox fx:id="member_status" layoutX="714.0" layoutY="113.0" prefHeight="30.0" prefWidth="209.0" promptText="Choose.." styleClass="textfield" stylesheets="@DashBoard.Css" />
+                                    <Button fx:id="member_clearbtn" layoutX="543.0" layoutY="157.0" mnemonicParsing="false" onAction="#membersClear" prefHeight="29.0" prefWidth="102.0" styleClass="btn" stylesheets="@DashBoard.Css" text="CLEAR" />
+                                    <Button fx:id="member_addbtn" layoutX="394.0" layoutY="157.0" mnemonicParsing="false" onAction="#membersAddbtn" prefHeight="29.0" prefWidth="102.0" styleClass="btn" stylesheets="@DashBoard.Css" text="ADD" />
+                                    <Button fx:id="member_update" layoutX="684.0" layoutY="157.0" mnemonicParsing="false" onAction="#membersUpdate" prefHeight="29.0" prefWidth="102.0" styleClass="btn" stylesheets="@DashBoard.Css" text="UPDATE" />
+                                    <Button fx:id="member_delete" layoutX="819.0" layoutY="157.0" mnemonicParsing="false" onAction="#memberDeletebtn" prefHeight="29.0" prefWidth="102.0" styleClass="btn" stylesheets="@DashBoard.Css" text="DELETE" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane layoutX="12.0" layoutY="228.0" prefHeight="359.0" prefWidth="938.0" stylesheets="@DashBoard.Css">
+                                 <styleClass>
+                                    <String fx:value="shadow" />
+                                    <String fx:value="whileback" />
+                                 </styleClass>
+                                 <children>
+                                    <TableView fx:id="member_tableview" layoutX="10.0" layoutY="8.0" onMouseClicked="#memberSelect" prefHeight="343.0" prefWidth="918.0">
+                                      <columns>
+                                        <TableColumn fx:id="member_tableview_id" prefWidth="66.39999389648438" text="Coach ID" />
+                                        <TableColumn fx:id="member_tableview_name" prefWidth="113.60000610351562" text="Name" />
+                                          <TableColumn fx:id="member_tableview_address" prefWidth="148.79998779296875" text="Address" />
+                                          <TableColumn fx:id="member_tableview_phone" prefWidth="128.800048828125" text="Phone" />
+                                          <TableColumn fx:id="member_tableview_gender" prefWidth="60.800048828125" text="Gender" />
+                                          <TableColumn fx:id="member_tableview_schedule" prefWidth="97.60003662109375" text="Schedule" />
+                                          <TableColumn fx:id="member_tableview_startdate" prefWidth="100.0" text="Start Date" />
+                                          <TableColumn minWidth="0.0" prefWidth="0.0" text="End Date" />
+                                          <TableColumn fx:id="member_tableview_enddate" prefWidth="100.0" text="End Date" />
+                                          <TableColumn fx:id="member_tableview_status" prefWidth="100.0" text="Status" />
+                                      </columns>
+                                    </TableView>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="PaymentForm" prefHeight="595.2" prefWidth="963.2" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <AnchorPane layoutX="14.0" layoutY="10.0" prefHeight="578.0" prefWidth="569.0" stylesheets="@DashBoard.Css">
+                                 <styleClass>
+                                    <String fx:value="whileback" />
+                                    <String fx:value="shadow" />
+                                 </styleClass>
+                                 <children>
+                                    <TableView fx:id="paytableview" layoutX="8.8" layoutY="11.2" prefHeight="559.0" prefWidth="554.0" AnchorPane.bottomAnchor="8.0" AnchorPane.leftAnchor="9.0" AnchorPane.rightAnchor="7.0" AnchorPane.topAnchor="11.0">
+                                      <columns>
+                                        <TableColumn fx:id="pay_col_cusid" prefWidth="92.00003051757812" text="Customer ID" />
+                                        <TableColumn fx:id="pay_col_name" prefWidth="129.5999755859375" text="Name" />
+                                          <TableColumn fx:id="pay_col_startdate" prefWidth="121.60000610351562" text="Start Date" />
+                                          <TableColumn fx:id="pay_col_enddate" prefWidth="114.39996337890625" text="End Date" />
+                                          <TableColumn fx:id="pay_col_status" prefWidth="120.80002441406248" text="Status" />
+                                      </columns>
+                                    </TableView>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane layoutX="600.0" layoutY="10.0" prefHeight="574.0" prefWidth="352.0" stylesheets="@DashBoard.Css">
+                                 <styleClass>
+                                    <String fx:value="whileback" />
+                                    <String fx:value="shadow" />
+                                 </styleClass>
+                                 <children>
+                                    <Label layoutX="10.0" layoutY="120.0" prefHeight="26.0" prefWidth="85.0" text="Customer ID :">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="47.0" layoutY="173.0" prefHeight="26.0" prefWidth="48.0" text="Name :">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <ComboBox fx:id="paycustomerid" layoutX="112.0" layoutY="120.0" onAction="#paymentMember" prefHeight="26.0" prefWidth="196.0" promptText="Choose.." styleClass="textfield" stylesheets="@DashBoard.Css" />
+                                    <ComboBox fx:id="payname" layoutX="112.0" layoutY="173.0" onAction="#paymentName" prefHeight="26.0" prefWidth="196.0" promptText="Choose.." styleClass="textfield" stylesheets="@DashBoard.Css" />
+                                    <Label layoutX="53.0" layoutY="223.0" prefHeight="26.0" prefWidth="48.0" text="Total :">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="paytotal" layoutX="108.0" layoutY="223.0" prefHeight="26.0" prefWidth="135.0" text="\$0.0">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="39.0" layoutY="270.0" prefHeight="26.0" prefWidth="63.0" text="Amount :">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="payamount" layoutX="111.0" layoutY="269.0" onAction="#paymentAmount" prefHeight="26.0" prefWidth="198.0" promptText="\$0.0" styleClass="textfield" stylesheets="@DashBoard.Css">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </TextField>
+                                    <Label layoutX="39.0" layoutY="309.0" prefHeight="26.0" prefWidth="63.0" text="Change :">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="paychange" layoutX="112.0" layoutY="309.0" prefHeight="26.0" prefWidth="90.0" text="\$0.0">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Button fx:id="Paybtn" layoutX="39.0" layoutY="369.0" mnemonicParsing="false" onAction="#paymentPayBtn" prefHeight="35.0" prefWidth="276.0" styleClass="btn" stylesheets="@DashBoard.Css" text="Pay" />
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                     </children></AnchorPane>
+               </center>
+            </BorderPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

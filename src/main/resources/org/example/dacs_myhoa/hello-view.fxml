@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="657.0" prefWidth="682.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.dacs_myhoa.HelloController">
+   <children>
+      <AnchorPane fx:id="mainform" prefHeight="660.0" prefWidth="687.0" styleClass="side-form" stylesheets="@Indexlogincss.Css">
+         <children>
+            <AnchorPane fx:id="sub_form" layoutX="-2.0" layoutY="1.0" prefHeight="650.0" prefWidth="342.0" styleClass="side-form" stylesheets="@Indexlogincss.Css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="341.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <FontAwesomeIcon fill="WHITE" glyphName="USERS" layoutX="80.0" layoutY="211.0" size="12em" />
+                  <Label alignment="CENTER" layoutX="27.0" layoutY="269.0" prefHeight="30.0" prefWidth="292.0" text="Gym Management System" textFill="#eae3e3">
+                     <font>
+                        <Font name="Arial" size="23.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lablesilde" layoutX="90.0" layoutY="472.0" prefHeight="38.0" prefWidth="166.0" text="Create Account" textFill="#ffe6e6">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="btsignup" alignment="CENTER" layoutX="45.0" layoutY="521.0" mnemonicParsing="false" onAction="#signupSlider" prefHeight="38.0" prefWidth="255.0" styleClass="side-btn" stylesheets="@Indexlogincss.Css" text="Sign Up" AnchorPane.bottomAnchor="96.60000000000014">
+                     <font>
+                        <Font size="16.0" />
+                     </font></Button>
+                  <Button fx:id="btsignin" layoutX="45.0" layoutY="521.0" mnemonicParsing="false" onAction="#loginSilder" prefHeight="38.0" prefWidth="255.0" styleClass="side-btn" stylesheets="@Indexlogincss.Css" text="Sign In" visible="false">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="formmain2" layoutX="359.2" prefHeight="687.0" prefWidth="369.0" styleClass="login-form" stylesheets="@Indexlogincss.Css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="341.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <FontAwesomeIcon fill="#313187" glyphName="USER" layoutX="133.0" layoutY="173.0" size="7EM" />
+                  <Label alignment="CENTER" layoutX="86.0" layoutY="196.0" prefHeight="37.0" prefWidth="166.0" text="Sign In" textFill="#433e86">
+                     <font>
+                        <Font name="Arial" size="28.0" />
+                     </font>
+                  </Label>
+                  <PasswordField fx:id="password" layoutX="46.0" layoutY="337.0" prefHeight="38.0" prefWidth="238.0" promptText="    Password" styleClass="textfield" stylesheets="@Indexlogincss.Css" />
+                  <TextField fx:id="username" layoutX="47.0" layoutY="270.0" prefHeight="38.0" prefWidth="238.0" promptText="    User Name" styleClass="textfield" stylesheets="@Indexlogincss.Css" />
+                  <Button fx:id="btlogin" alignment="CENTER" layoutX="46.0" layoutY="405.6" mnemonicParsing="false" onAction="#login" prefHeight="38.0" prefWidth="238.0" styleClass="login-btn" stylesheets="@Indexlogincss.Css" text="Login" textAlignment="CENTER" textFill="#080404" AnchorPane.bottomAnchor="213.0" AnchorPane.topAnchor="405.0">
+                     <font>
+                        <Font size="16.0" />
+                     </font></Button>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="mainform3" layoutX="-1.6" prefHeight="658.0" prefWidth="343.0" stylesheets="@Indexlogincss.Css" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="341.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <FontAwesomeIcon fill="#0c0c63" glyphName="USER_PLUS" layoutX="111.0" layoutY="178.0" size="10EM" wrappingWidth="120.7999267578125" />
+                  <Label alignment="CENTER" layoutX="86.0" layoutY="196.0" prefHeight="37.0" prefWidth="166.0" text="Sign Up">
+                     <font>
+                        <Font name="Arial" size="28.0" />
+                     </font>
+                  </Label>
+                  <PasswordField fx:id="passwordplus" layoutX="52.0" layoutY="436.0" prefHeight="44.0" prefWidth="238.0" promptText="Password" styleClass="textfield" stylesheets="@Indexlogincss.Css" />
+                  <TextField fx:id="usernameplus" layoutX="52.0" layoutY="365.0" prefHeight="44.0" prefWidth="238.0" promptText="User Name" styleClass="textfield" stylesheets="@Indexlogincss.Css" />
+                  <Button fx:id="btsignupplus" alignment="CENTER" layoutX="52.0" layoutY="504.0" mnemonicParsing="false" onAction="#signup" prefHeight="35.0" prefWidth="238.0" styleClass="login-btn" stylesheets="@Indexlogincss.Css" text="Sign Up" textAlignment="CENTER" textFill="#080404" AnchorPane.bottomAnchor="112.0">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Button>
+                  <TextField fx:id="email" layoutX="50.0" layoutY="292.0" prefHeight="44.0" prefWidth="238.0" promptText="Email Address" styleClass="textfield" stylesheets="@Indexlogincss.Css" AnchorPane.bottomAnchor="321.6" />
+               </children>
+               <styleClass>
+                  <String fx:value="login-form" />
+                  <String fx:value="login-form" />
+               </styleClass>
+            </AnchorPane>
+            <AnchorPane prefHeight="62.0" prefWidth="682.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Button fx:id="close" layoutX="610.0" layoutY="3.0" mnemonicParsing="false" onAction="#closebtaction" prefHeight="23.0" prefWidth="65.0" style="-fx-background-color: #fff;" styleClass="close-btn" stylesheets="@Indexlogincss.Css" textFill="#e1dddd" AnchorPane.bottomAnchor="33.800000000000004" AnchorPane.rightAnchor="3.0" AnchorPane.topAnchor="3.0">
+                     <graphic>
+                        <FontAwesomeIcon fill="#201c1c" glyphName="CLOSE" size="1.2em" />
+                     </graphic>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

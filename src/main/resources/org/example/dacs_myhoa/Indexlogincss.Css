@@ -1,0 +1,51 @@
+.side-form{
+-fx-background-color: linear-gradient( to top right ,#1a1143 ,#3952b4);
+-fx-border-color:#000;
+-fx-border-width: .4px .2px .4px .4px;
+}
+.side-btn{
+-fx-background-color: transparent;
+-fx-text-fill : #fff;
+-fx-font-size: 17px;
+-fx-border-color: #fff;
+-fx-border-radius:10%;
+-fx-border-width: .5px;
+-fx-cursor :hand;
+}
+.side-btn:hover{
+-fx-background-color: #fff;
+-fx-text-fill: #1a1143;
+-fx-font-size: 18px;
+}
+.close-btn{
+ -fx-background-color: transparent;
+ -fx-cursor :hand;
+}
+.close-btn:hover{
+-fx-background-color: #000;
+}
+.login-form{
+-fx-background-color: #fff;
+-fx-border-color:#000;
+-fx-border-width:.4px .4px .4px .2px;
+}
+.login-btn{
+-fx-background-color:linear-gradient( to top right ,#1a1143 ,#3952b4);
+-fx-cursor :hand;
+-fx-text-fill: #fff;
+-fx-font-size: 17px;
+}
+.login-btn:hover{
+-fx-background-color:  linear-gradient( to top right ,#171773 ,#34348e);
+}
+.textfield{
+-fx-background-color: #efefef;
+-fx-font-size:13px;
+-fx-border-color:#000;
+-fx-border-width: .3px;
+}
+.textfield:focused{
+-fx-background-color: #fff;
+-fx-border-width: .1px;
+-fx-border-color:#3f2ba4;
+}

@@ -1,0 +1,24 @@
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
+public class Database {
+    private static String DB_URL = "jdbc:sqlserver://LAP-MYHOA\\MSSQLSERVER01;"
+            + "databaseName=DOAN;encrypt=true;trustServerCertificate=true;";
+    private static String USER_NAME = "sa";
+    private static String PASSWORD = "sa";
+
+    public static Connection getConnection() {
+        Connection connection = null;
+        try {
+            Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
+            connection = DriverManager.getConnection(DB_URL, USER_NAME, PASSWORD);
+            System.out.println("Kết nối thành công!");
+        } catch (Exception ex) {
+            System.out.println("Kết nối thất bại!");
+            ex.printStackTrace();
+        }
+        return connection;
+    }
+}
+FPT Software Academy
