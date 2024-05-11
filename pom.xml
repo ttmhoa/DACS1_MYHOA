@@ -96,7 +96,7 @@
                         <!-- Default configuration for running with: mvn clean javafx:run -->
                         <id>default-cli</id>
                         <configuration>
-                            <mainClass>org.example.dacs_myhoa/org.example.dacs_myhoa.HelloApplication</mainClass>
+                            <mainClass>org.example.dacs_myhoa/org.example.dacs_myhoa.LoginStart</mainClass>
                             <launcher>app</launcher>
                             <jlinkZipName>app</jlinkZipName>
                             <jlinkImageName>app</jlinkImageName>

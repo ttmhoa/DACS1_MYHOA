@@ -82,6 +82,7 @@
                                  </font>
                               </Label>
                               <Button fx:id="payment" layoutX="29.0" layoutY="410.0" mnemonicParsing="false" onAction="#switchform" prefHeight="35.0" prefWidth="162.0" styleClass="nav-btn" stylesheets="@DashBoard.Css" text="Payment" />
+                              <Button fx:id="btn_chat" layoutX="29.0" layoutY="466.0" mnemonicParsing="false" onAction="#sliderGroupChat" prefHeight="35.0" prefWidth="162.0" styleClass="nav-btn" stylesheets="@DashBoard.Css" text="Group Chat" />
                            </children>
                            <styleClass>
                               <String fx:value="nav" />

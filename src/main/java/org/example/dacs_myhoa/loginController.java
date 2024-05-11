@@ -24,7 +24,7 @@ import java.sql.Connection;
 import java.util.ResourceBundle;
 
 
-public class HelloController implements Initializable {
+public class loginController implements Initializable {
     @FXML
     private Button btlogin;
 
@@ -71,6 +71,7 @@ public class HelloController implements Initializable {
 
     private PreparedStatement preparedStatement;
     private ResultSet result;
+    public static String userNameLogin;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -99,7 +100,7 @@ public class HelloController implements Initializable {
                      alert.setTitle("Information Message");
                      alert.setHeaderText(null);
                      alert.setContentText("Successfully Login!");
-
+                     userNameLogin=username.getText();
                      alert.showAndWait();
                      sliderloginaction ();
                      btlogin.getScene().getWindow().hide();
@@ -148,6 +149,7 @@ public class HelloController implements Initializable {
                    alert.setTitle("Information Message");
                    alert.setHeaderText(null);
                    alert.setContentText(" Successfully Create new account ");
+
                    alert.showAndWait();
                    preparedStatement.executeUpdate();
                    email.setText("");
@@ -222,7 +224,7 @@ public class HelloController implements Initializable {
             });
             stage.initStyle(StageStyle.UNDECORATED);
             scene.getStylesheets().add(getClass().getResource("DashBoard.Css").toExternalForm());
-            stage.setTitle("Hello!");
+            stage.setTitle("Gym Management Application");
             stage.setScene(scene);
             stage.show();
 
@@ -234,6 +236,7 @@ public class HelloController implements Initializable {
             e.getCause();
         }
     }
+
 
 
 

@@ -1,7 +1,6 @@
 package org.example.dacs_myhoa;
 
 import javafx.application.Application;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -11,7 +10,7 @@ import javafx.stage.StageStyle;
 
 import java.io.IOException;
 
-public class HelloApplication extends Application {
+public class LoginStart extends Application {
     private double x = 0;
     private double y = 0;
 

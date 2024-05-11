@@ -1053,5 +1053,37 @@ public class dashbroadController implements Initializable {
         Stage stage = (Stage) close_dash.getScene().getWindow();
         stage.close();
     }
+    public void sliderGroupChat (){
+        try {
+            Stage stage=  new Stage();
+            Parent root = FXMLLoader.load(getClass().getResource("GroupChat.fxml"));
+            Scene scene = new Scene(root);
+            root.setOnMousePressed((MouseEvent event) ->{
+                x= event.getScreenX();
+                y= event.getScreenY();
+            });
+            root.setOnMouseDragged((MouseEvent event) ->{
+                stage.setX(event.getScreenX() - x);
+                stage.setY(event.getScreenY() -y);
+                stage.setOpacity(.8);
+
+            });
+            root.setOnMouseReleased((MouseEvent event) ->{
+                stage.setOpacity(1);
+            });
+            stage.initStyle(StageStyle.UNDECORATED);
+            scene.getStylesheets().add(getClass().getResource("ChatMessage.Css").toExternalForm());
+            stage.setTitle("Gym Management Application");
+            stage.setScene(scene);
+            stage.show();
+
+
+
+        }catch (Exception e){
+            //noinspection CallToPrintStackTrace
+            e.printStackTrace();
+            e.getCause();
+        }
+    }
 
 }

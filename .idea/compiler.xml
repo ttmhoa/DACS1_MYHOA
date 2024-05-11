@@ -9,5 +9,8 @@
         <module name="DACS_MYHOA" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="DACS_MYHOA (1)" target="17" />
+    </bytecodeTargetLevel>
   </component>
 </project>
