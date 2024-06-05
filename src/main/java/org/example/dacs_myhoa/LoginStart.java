@@ -34,7 +34,7 @@ public class LoginStart extends Application {
         });
         stage.initStyle(StageStyle.TRANSPARENT);
         scene.getStylesheets().add(getClass().getResource("Indexlogincss.Css").toExternalForm());
-        stage.setTitle("Hello!");
+        stage.setTitle("GYM MANAGEMENT SYSTEM");
         stage.setScene(scene);
         stage.show();
     }

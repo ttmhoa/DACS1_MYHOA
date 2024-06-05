@@ -1,14 +1,18 @@
 package org.example.dacs_myhoa;
 
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.geometry.NodeOrientation;
-import javafx.scene.control.Button;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.*;
 
-import javafx.scene.control.TextArea;
-import javafx.scene.control.TextField;
 import javafx.scene.input.KeyEvent;
+import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -20,6 +24,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.Optional;
 import java.util.ResourceBundle;
 
 public class Room extends Thread implements Initializable {
@@ -31,6 +36,12 @@ public class Room extends Thread implements Initializable {
     private TextArea msgRoom;
     @FXML
     private Button close;
+    @FXML
+    private Button profile;
+    @FXML
+    private AnchorPane panehome;
+    @FXML
+    private AnchorPane profileanchor;
     private PreparedStatement preparedStatement;
     private ResultSet result;
 
@@ -145,9 +156,55 @@ public void showData(){
     }
 }
 
+    private double x;
+    private double y;
 
     public void closebtaction() {
-        Stage stage = (Stage) close.getScene().getWindow();
-        stage.close();
+        try {
+            Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+            alert.setTitle("Confirmation Message");
+            alert.setHeaderText(null);
+            alert.setContentText("Are you sure you want to preview?");
+            Optional<ButtonType> optional = alert.showAndWait();
+            if (optional.get().equals(ButtonType.OK)) {
+                close.getScene().getWindow().hide();
+                Parent root = FXMLLoader.load(getClass().getResource("Dashboard.fxml"));
+
+                Stage stage = new Stage();
+                Scene scene = new Scene(root);
+                scene.getStylesheets().add(getClass().getResource("DashBoard.Css").toExternalForm());
+                stage.initStyle(StageStyle.TRANSPARENT);
+                root.setOnMousePressed((MouseEvent event) -> {
+                    x = event.getScreenX();
+                    y = event.getScreenY();
+                });
+                root.setOnMouseDragged((MouseEvent event) -> {
+                    stage.setX(event.getScreenX() - x);
+                    stage.setY(event.getScreenY() - y);
+                    stage.setOpacity(.8);
+
+                });
+                root.setOnMouseReleased((MouseEvent event) -> {
+                    stage.setOpacity(1);
+                });
+                stage.setScene(scene);
+                stage.show();
+
+
+            } else {
+
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+    public void sliderProfile(){
+        profileanchor.setVisible(true);
+        panehome.setVisible(false);
+    }
+    public void sliderHome(){
+        profileanchor.setVisible(false);
+        panehome.setVisible(true);
     }
 }

@@ -227,6 +227,8 @@ public class dashbroadController implements Initializable {
     private Button dashboard_btn;
     @FXML
     private Button coaches;
+    @FXML
+    private Button btn_chat;
 
     private Connection conn;
     private PreparedStatement preparedStatement;
@@ -1054,6 +1056,7 @@ public class dashbroadController implements Initializable {
         stage.close();
     }
     public void sliderGroupChat (){
+        btn_chat.getScene().getWindow().hide();
         try {
             Stage stage=  new Stage();
             Parent root = FXMLLoader.load(getClass().getResource("GroupChat.fxml"));
@@ -1076,7 +1079,6 @@ public class dashbroadController implements Initializable {
             stage.setTitle("Gym Management Application");
             stage.setScene(scene);
             stage.show();
-
 
 
         }catch (Exception e){
