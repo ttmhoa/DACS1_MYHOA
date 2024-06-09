@@ -6,7 +6,6 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
@@ -17,13 +16,13 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="708.0" prefWidth="1029.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.dacs_myhoa.Room">
+<AnchorPane prefHeight="709.0" prefWidth="1106.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.dacs_myhoa.Room">
    <children>
-      <AnchorPane fx:id="panehome" layoutX="298.0" prefHeight="708.0" prefWidth="842.0">
+      <AnchorPane fx:id="panehome" layoutX="298.0" prefHeight="709.0" prefWidth="850.0">
          <children>
-            <AnchorPane layoutY="-1.0" prefHeight="708.0" prefWidth="849.0">
+            <AnchorPane layoutY="-1.0" prefHeight="710.0" prefWidth="850.0">
                <children>
-                  <TextArea fx:id="msgRoom" editable="false" layoutX="110.0" layoutY="132.0" opacity="0.93" prefHeight="494.0" prefWidth="374.0" styleClass="mess" stylesheets="@ChatMessage.CSS">
+                  <TextArea fx:id="msgRoom" editable="false" layoutX="219.0" layoutY="130.0" opacity="0.93" prefHeight="494.0" prefWidth="434.0" styleClass="mess" stylesheets="@ChatMessage.CSS">
                      <font>
                         <Font size="13.0" />
                      </font>
@@ -31,47 +30,38 @@
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </padding>
                   </TextArea>
-                  <Pane layoutY="634.0" prefHeight="74.0" prefWidth="484.0">
+                  <Pane layoutX="219.0" layoutY="634.0" prefHeight="74.0" prefWidth="454.0">
                      <children>
-                        <Button layoutX="87.0" layoutY="18.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="45.0" styleClass="image-btn" stylesheets="@ChatMessage.CSS" textAlignment="CENTER">
+                        <Button layoutX="276.0" layoutY="24.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="28.0" styleClass="image-btn" stylesheets="@ChatMessage.CSS" textAlignment="CENTER">
                            <graphic>
-                              <FontAwesomeIcon fill="#545356" glyphName="PAPERCLIP" size="2.3em" textAlignment="CENTER" wrappingWidth="30.721426010131836" />
+                              <FontAwesomeIcon fill="#545356" glyphName="PAPERCLIP" size="2em" textAlignment="CENTER" wrappingWidth="30.721426010131836" />
                            </graphic>
                         </Button>
-                        <Button fx:id="btn_send" graphicTextGap="2.0" layoutX="136.0" layoutY="18.0" mnemonicParsing="false" onAction="#send" prefHeight="45.0" prefWidth="35.0" styleClass="image-btn" stylesheets="@ChatMessage.CSS">
+                        <Button graphicTextGap="2.0" layoutX="324.0" layoutY="21.0" mnemonicParsing="false" prefHeight="8.0" prefWidth="48.0" styleClass="image-btn" stylesheets="@ChatMessage.CSS">
                            <font>
                               <Font size="19.0" />
                            </font>
                            <graphic>
-                              <FontAwesomeIcon fill="#9e9ba1" glyphName="IMAGE" size="1.3EM" />
+                              <FontAwesomeIcon fill="#4e4853" glyphName="IMAGE" size="1EM" />
                            </graphic>
                         </Button>
-                        <TextField fx:id="msgField" layoutX="202.0" layoutY="25.0" onAction="#sendMessageByKey" prefHeight="30.0" prefWidth="244.0" styleClass="textfield" stylesheets="@ChatMessage.CSS">
+                        <TextField fx:id="msgField" layoutX="23.0" layoutY="26.0" onAction="#sendMessageByKey" prefHeight="30.0" prefWidth="253.0" styleClass="textfield" stylesheets="@ChatMessage.CSS">
                            <font>
                               <Font size="14.0" />
                            </font>
                         </TextField>
-                        <Button fx:id="btn_send" layoutX="446.0" layoutY="18.0" mnemonicParsing="false" onAction="#send" prefHeight="39.0" prefWidth="28.0" styleClass="image-btn" stylesheets="@ChatMessage.CSS">
-                           <graphic>
-                              <FontAwesomeIcon fill="#0095f2" glyphName="SEND" size="2em" textAlignment="CENTER" wrappingWidth="27.6000003814695" />
-                           </graphic>
-                        </Button>
                      </children>
                   </Pane>
-                  <Pane layoutX="544.0" layoutY="136.0" prefHeight="494.0" prefWidth="277.0">
-                     <children>
-                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="40.0" prefWidth="277.0" styleClass="nav-right" stylesheets="@ChatMessage.CSS" text="DOCUMENT" textAlignment="CENTER">
-                           <font>
-                              <Font name="System Bold" size="20.0" />
-                           </font>
-                        </Label>
-                        <ListView layoutY="69.0" prefHeight="424.0" prefWidth="283.0" />
-                        <FontAwesomeIcon fill="#4a4444" glyphName="TRASH" layoutX="230.0" layoutY="30.0" selectionStart="0" size="2.3EM" wrappingWidth="33.0" />
-                     </children>
-                  </Pane>
+                  <Button fx:id="btn_send" layoutX="595.0" layoutY="654.0" mnemonicParsing="false" onAction="#send" prefHeight="34.0" prefWidth="57.0" stylesheets="@ChatMessage.CSS" text="Send" textFill="#f7f1f1">
+                     <styleClass>
+                        <String fx:value="=" />
+                        <String fx:value="close-btn" />
+                        <String fx:value="shadow" />
+                     </styleClass>
+                  </Button>
                </children>
             </AnchorPane>
-            <Pane layoutX="48.0" layoutY="16.0" prefHeight="90.0" prefWidth="769.0" styleClass="head-pane" stylesheets="@ChatMessage.CSS">
+            <Pane layoutX="48.0" layoutY="16.0" prefHeight="90.0" prefWidth="732.0" styleClass="head-pane" stylesheets="@ChatMessage.CSS">
                <children>
                   <TextField layoutX="92.0" layoutY="26.0" prefHeight="39.0" prefWidth="414.0" promptText="   Search here..." style="-fx-background-color: transparent; -fx-border-radius: 50px; -fx-border-color: #fff;" styleClass="textfield" stylesheets="@ChatMessage.CSS">
                      <font>

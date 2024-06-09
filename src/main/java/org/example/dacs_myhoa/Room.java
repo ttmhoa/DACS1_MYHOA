@@ -121,7 +121,6 @@ public class Room extends Thread implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-
         connectSocket();
         showData();
     }
